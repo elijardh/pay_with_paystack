@@ -130,7 +130,7 @@ class _PaystackPayNowState extends State<PaystackPayNow> {
       /// Response code 200 means OK.
       /// Send data to the POJO Class if 200.
       var decodedRespBody = jsonDecode(response.body);
-      if (decodedRespBody["data"]["gateway_response"] == "Approved") {
+      if (decodedRespBody["data"]["gateway_response"] == "Successful") {
         widget.transactionCompleted();
       } else {
         widget.transactionNotCompleted();
